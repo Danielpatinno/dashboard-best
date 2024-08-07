@@ -52,7 +52,7 @@ export default async function Home() {
         </div>
 
         <section className='border-2'>
-          <TableSales invoices={payments}/>
+          <TableSales  invoices={payments}/>
         </section>
       </div>
 
@@ -60,7 +60,7 @@ export default async function Home() {
           <h2 className='text-black'>Produtos mais vendidos</h2>
           <ul>
             {solds.sort((a, b) => b.quantity - a.quantity).map((sold) => (
-              <li className='flex justify-between p-4 border-b'>
+              <li key={sold.id} className='flex justify-between p-4 border-b'>
                 {sold.name}
                 <span>{sold.quantity}</span>
               </li>

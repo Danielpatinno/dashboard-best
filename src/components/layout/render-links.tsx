@@ -21,7 +21,7 @@ export function RenderLinks({links}:linksProps) {
   return (
     <ul className="text-white">
       {links.map((link) => (
-        <li className={`hover:bg-zinc-500 ${pathname === link.url ? "bg-zinc-500" : ""}`}>
+        <li key={link.name} className={`hover:bg-zinc-500 ${pathname === link.url ? "bg-zinc-500" : ""}`}>
           <Link className="block text-base text-center uppercase pt-4 px-4 flex flex-col items-center justify-center" href={link.url}>
             <div className="h-10 w-10 flex items-center justify-center">{link.icon}</div>
             <span>{link.name}</span>

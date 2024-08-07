@@ -27,7 +27,7 @@ export function TableClients({customerCharges}:TableClientesProps) {
 
   useEffect(() => {
     setOptimisticClients(customerCharges)
-  },[])
+  },[customerCharges])
 
 
   const addOptimisticClient = (newClient: CustomerCharge) => {
